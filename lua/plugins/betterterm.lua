@@ -38,6 +38,10 @@ return {
     position = 'bot',
     size = 12,
     index_base = 1,
+    active_tab_hl = 'lualine_a_normal',
+    inactive_tab_hl = 'lualine_b_normal',
+    new_tab_hl = 'lualine_a_insert',
+    new_tab_icon = '✚',
   },
 
   config = function(_, opts)
