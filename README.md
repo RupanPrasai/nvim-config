@@ -2,7 +2,7 @@
 
 A modular Neovim configuration built for productivity and maintainability. Originally based on Kickstart.nvim but completely restructured into a clean, organized setup.
 
-## ✨ Features
+## Features
 
 - **Modular Architecture** - Clean separation of concerns with logical file organization
 - **LSP Support** - Full language server protocol integration with Mason
@@ -13,7 +13,7 @@ A modular Neovim configuration built for productivity and maintainability. Origi
 - **Git Integration** - Built-in git workflow tools
 - **Syntax Highlighting** - Tree-sitter powered highlighting
 
-## 📁 Structure
+## Structure
 
 ```
 ~/.config/nvim/
@@ -35,11 +35,11 @@ A modular Neovim configuration built for productivity and maintainability. Origi
 │       └── catppuccin.lua     # Colorscheme configuration
 ```
 
-## ⚡ Installation
+## Installation
 
 ### Prerequisites
 
-- Neovim 0.9+ (latest stable recommended)
+- Neovim 0.10+ (latest stable recommended)
 - Git
 - A Nerd Font (for icons)
 - ripgrep (for telescope grep functionality)
@@ -47,11 +47,9 @@ A modular Neovim configuration built for productivity and maintainability. Origi
 ### Install
 
 ```bash
-# Backup existing config (if any)
-mv ~/.config/nvim ~/.config/nvim.backup
 
 # Clone this configuration
-git clone https://github.com/[your-username]/nvim-config.git ~/.config/nvim
+git clone https://github.com/RupanPrasai/nvim-config.git ~/.config/nvim
 
 # Start Neovim (plugins will install automatically)
 nvim
@@ -63,25 +61,26 @@ nvim
 2. **Health Check**: Run `:checkhealth` to verify everything is working
 3. **Update Plugins**: Run `:Lazy sync` to update all plugins
 
-## 🔧 Key Bindings
+## Key Bindings
 
 ### Leader Key: `<Space>`
 
 | Key | Mode | Action |
 |-----|------|--------|
-| `<leader>ff` | Normal | Find files |
-| `<leader>fg` | Normal | Live grep |
-| `<leader>fb` | Normal | Find buffers |
-| `<leader>fh` | Normal | Find help |
-| `<leader>e` | Normal | Toggle file explorer |
-| `<leader>q` | Normal | Quit |
-| `<leader>w` | Normal | Save |
-| `gd` | Normal | Go to definition |
-| `gr` | Normal | Go to references |
-| `K` | Normal | Hover documentation |
+| `<leader>sf` | Normal | Find files |
+| `<leader>sg` | Normal | Live grep in project root |
+| `<leader>sh` | Normal | Find help |
+| `<leader>sp` | Normal | Find files in project root |
+| `<leader>sn` | Normal | Find files in Neovim Files |
+| `<leader>m` | Normal | Toggle Grapple Menu |
+| `<leader>1-9` | Normal | Select Grapple Tag 1-9 |
+| `<leader>n` | Normal | Select Next Grapple Tag |
+| `<leader>p` | Normal | Select Next Grapple Tag |
+| `<leader>[` | Normal | Toggle Neo-tree Focus |
+| `<leader>{` | Normal | Toggle Neo-tree open |
 | `<C-h/j/k/l>` | Normal | Navigate splits |
 
-## 🔌 Key Plugins
+## Key Plugins
 
 - **[lazy.nvim](https://github.com/folke/lazy.nvim)** - Plugin manager
 - **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)** - Fuzzy finder
@@ -92,7 +91,7 @@ nvim
 - **[catppuccin.nvim](https://https://github.com/catppuccin/nvim)** - Colorscheme
 - **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)** - Completion engine
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Plugins
 
@@ -118,7 +117,7 @@ return {
 
 Create a `local.lua` file in the root directory for machine-specific settings (this file is gitignored).
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -141,11 +140,11 @@ nvim
 - Install a [Nerd Font](https://www.nerdfonts.com/)
 - Set your terminal to use the Nerd Font
 
-## 📝 License
+## License
 
 MIT License - feel free to use and modify as needed.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Originally inspired by [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - Thanks to the Neovim community for amazing plugins and support
