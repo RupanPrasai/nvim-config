@@ -7,6 +7,7 @@ return {
     tag_title = function(_)
       return ' 󰛢 Grapple '
     end,
+    status = true,
     win_opts = {
       width = 80,
       height = 15,
@@ -14,10 +15,9 @@ return {
       col = 0.5,
 
       relative = 'editor',
-      border = 'rounded',
+      border = 'double',
       focusable = false,
       style = 'minimal',
-
       title = ' Grapple ',
       title_pos = 'center',
       title_padding = '  ',

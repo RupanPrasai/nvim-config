@@ -15,10 +15,27 @@ local neotree_cursorline = '#b3bac7'
 
 vim.api.nvim_create_autocmd({ 'WinEnter', 'BufEnter' }, {
   callback = function()
-    if vim.bo.filetype == 'neo-tree' then
+    if vim.bo.filetype == 'neo-tree' or vim.bo.filetype == 'grapple' then
       vim.api.nvim_set_hl(0, 'CursorLine', { bg = neotree_cursorline })
     else
       vim.api.nvim_set_hl(0, 'CursorLine', { bg = base_cursorline })
     end
   end,
 })
+
+-- Activate CursorLine when Grapple Menu is opened
+local orig_open_win = vim.api.nvim_open_win
+
+vim.api.nvim_open_win = function(buf, enter, config)
+  local win = orig_open_win(buf, enter, config)
+
+  if config.relative ~= '' and vim.bo[buf].filetype == 'grapple' then
+    vim.defer_fn(function()
+      pcall(function()
+        vim.wo[win].cursorline = true
+      end)
+    end, 10)
+  end
+
+  return win
+end
