@@ -37,7 +37,9 @@ return {
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
       },
       color_overrides = {},
-      custom_highlights = {},
+      custom_highlights = {
+        CursorLine = { bg = '#d6dae2' },
+      },
       default_integrations = true,
       integrations = {
         cmp = true,
@@ -49,6 +51,7 @@ return {
           enabled = true,
           indentscope_color = '',
         },
+        neotree = true,
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
     }
