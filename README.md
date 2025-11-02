@@ -1,4 +1,4 @@
-# Rupan's Neovim Configuration
+# Rupan Prasai Neovim Configuration
 
 A modular Neovim configuration built for productivity and maintainability. Originally based on Kickstart.nvim but completely restructured into a clean, organized setup.
 
