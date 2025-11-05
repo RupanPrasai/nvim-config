@@ -8,6 +8,9 @@ vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { noremap = true })
 --Remap 0 to act as <_>
 vim.keymap.set({ 'n', 'v', 'o' }, '0', '_')
 
+-- Remap :wa to <leader>w (save all)
+vim.keymap.set('n', '<leader>w', ':wa<CR>', { noremap = true, silent = true })
+
 -- Remap delete operations to black hole register
 vim.keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, 'D', '"_D', { noremap = true })
